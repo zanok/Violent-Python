@@ -9,12 +9,15 @@ def extractFile(file,password):
     try:
         file.extractall(pwd=password)
         print '[+] The password is: '+password
-        exit(0)
+        sys.exit()
     except:
         pass
     return
 
 def main():
+    if len(sys.argv) != 2:
+        print 'invalid number of arguments'
+        exit(0)
     zfile = zipfile.ZipFile(sys.argv[1])
     dict = open('dictionary.txt','r')
     for word in dict.readlines():

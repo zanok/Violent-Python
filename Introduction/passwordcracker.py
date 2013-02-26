@@ -16,8 +16,6 @@ def crack(hash):
 
 def main():
     file = open('passwords.txt','r')
-    for word in file.readlines():
-
 
 if __name__ == "__main__":
     print crypt.crypt('egg','hx')
